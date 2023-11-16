@@ -1,0 +1,341 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script type="text/javascript">
+            function getCheckbox() {
+                // One-Liner version to loop through each input element and check the first checkbox element
+                // for(x=0;x<document.getElementsByTagName('input').length;x++)
+                // {
+                //     if(document.getElementsByTagName('input').item(x).type=='checkbox')
+                //     {
+                //         document.getElementsByTagName('input').item(x).checked=true;
+                //         // return true; //to end the loop and stop aat the first loop
+                //     }
+                // };
+            
+                // loop through each input element and output the value of any checkbox elements
+                for (x = 0; x < document.getElementsByTagName('input').length; x++) {
+                    if (document.getElementsByTagName('input').item(x).type == 'checkbox') {
+                        alert(document.getElementsByTagName('input').item(x).value);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="getCheckbox();">
+        <span id="span0">Don't quantify this one</span><input type="text" id="sometext" value="mice" /><br />
+        <span id="span1">here is checkbox 1:</span> <input type="checkbox" id="randomstuff1" value="cats" /><br />
+        <span id="span2">here is checkbox 2:</span> <input type="checkbox" id="randomstuff2" value="dogs" />    
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+.mask1 {
+  -webkit-mask-image: url(img/hourglassedit.png);
+  mask-image: url(img/hourglassedit.png);
+  -webkit-mask-size: 80%;
+  mask-size: 80%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;    
+}
+</style>
+</head>
+<body>
+
+<h1>The mask-position Property</h1>
+
+<h3>Set the position of the mask layer image to center:</h3>
+<div class="mask1">
+<img src="img/img_5terre.jpg" alt="Cinque Terre" width="1200" height="400">
+</div>
+
+<h3>Original image:</h3>
+<img src="img/img_5terre.jpg" alt="Cinque Terre" width="1000" height="400">
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+.mask1 {
+  -webkit-mask-image: url(img/hourglassedit.png);
+  mask-image: url(img/hourglassedit.png);
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;    
+}
+div {
+  width: 200px;
+  height: 100px;
+  background:grey;
+  border: 1px solid black;
+}
+div[id=glasscont] {
+    background: rgba(216, 181, 152, 0.829);
+    animation: mymove 8s;
+    position: relative;
+    width:2px;
+    height: 2px;
+    margin-left: 100px;
+    z-index: 100;
+}
+div[id=glasscont1] {
+    background: rgba(216, 181, 152, 0.829);
+    animation: mymove 9s;
+    position: relative;
+    width:2px;
+    height: 2px;
+    margin-left: 90px;
+    z-index: 100;
+}
+div[id=glasscont2] {
+    background: rgba(216, 181, 152, 0.829);
+    animation: mymove 10s;
+    position: relative;
+    width:2px;
+    height: 2px;
+    margin-left: 95px;
+    z-index: 100;
+}
+
+
+@keyframes mymove {
+  from {top: 0px;}
+  25% {top:25px}
+  50% {top:50px}
+  75% {top:75px}
+  100% {top: 100px;}
+}
+</style>
+</head>
+<body>
+
+<h1>The mask-position Property</h1>
+
+<h3>Set the position of the mask layer image to center:</h3>
+<div id="glasscont"></div>
+<div id="glasscont1"></div>
+<div id="glasscont2"></div>
+<div id="glasscont1"></div>
+<div id="glasscont2"></div>
+<div id="glasscont"></div>
+<div id="glasscont1"></div>
+<div id="glasscont2"></div>
+<div id="glasscont"></div>
+
+<div class="mask1">
+</div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7851acdd21.js" crossorigin="anonymous"></script>
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #e3f2fd;
+}
+
+.select-menu {
+  max-width: 330px;
+  margin: 50px auto;
+}
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.select-menu .options {
+  position: absolute;
+  width: 330px;
+  overflow-y: auto;
+  max-height: 295px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
+}
+.select-menu .options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
+}
+.select-menu .options .option:hover {
+  background: #f2f2f2;
+}
+.select-menu .options .option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+.select-menu .options .option .option-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.select-btn i {
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+.select-menu.active .options {
+  display: block;
+  opacity: 0;
+  z-index: 10;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
+    </style> -->
+    <script type="text/javascript">
+        function getCheckbox() {
+            // One-Liner version to loop through each input element and check the first checkbox element
+            // for(x=0; x < document.getElementsByTagName('input').length;x++){
+            //     if(document.getElementsByTagName('input').item(x).type=='checkbox'){
+            //         document.getElementsByTagName('input').item(x).checked=true;
+            //         return true;
+            //     }
+            // };
+            
+            // loop through each input element and output the value of any checkbox elements
+            for (x = 0; x < document.getElementsByTagName('input').length; x++) {
+                if (document.getElementsByTagName('input').item(x).type == 'checkbox') {
+                    alert(document.getElementsByTagName('input').item(x).value);
+                }
+            }
+        }
+        </script>
+</head>
+<body onload="getCheckbox();">
+    <span id="span0">Don't quantify this one</span><input type="text" id="sometext" value="mice" /><br />
+    <span id="span1">here is checkbox 1:</span> <input type="checkbox" id="randomstuff1" value="cats" /><br />
+    <span id="span2">here is checkbox 2:</span> <input type="checkbox" id="randomstuff2" value="dogs" />
+
+    <!-- <div class="col-md-6 select-menu">
+        <input type="text" id="plinterest" name="plinterest" onmouseup="Populate(this.value)" placeholder="--Select Places of interest--" class="form-control select-btn sBtn-text" spellcheck="false">
+        <div id="pldropdown" class="options" style="position:absolute; width:auto; max-height:200px; overflow: scroll" name="pldropdown"></div>
+    </div> -->
+
+    <!-- Remove 'active' class, this is just to show in Codepen thumbnail -->
+    <!-- <div class="select-menu">
+            <div class="select-btn">
+            <span class="sBtn-text">Select your option</span>
+            <i class="fa fa-chevron-down"></i>
+            </div>
+        
+            <ul class="options">
+            <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text">Instagram</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text">Linkedin</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-facebook-circle" style="color: #4267B2;"></i>
+                <span class="option-text">Facebook</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-twitter" style="color: #1DA1F2;"></i>
+                <span class="option-text">Twitter</span>
+            </li>
+            </ul>
+    </div>
+
+                <script>
+                const optionMenu = document.querySelector(".select-menu"),
+    selectBtn = optionMenu.querySelector(".select-btn"),
+    options = optionMenu.querySelectorAll(".option"),
+    sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+    selectBtn.addEventListener("click", () =>
+    optionMenu.classList.toggle("active")
+    );
+
+    options.forEach((option) => {
+    option.addEventListener("click", () => {
+    let selectedOption = option.querySelector(".option-text").innerText;
+    sBtn_text.innerText = selectedOption;
+
+    optionMenu.classList.remove("active");
+    });
+    });
+
+                </script> -->
+
+</body>
+</html>
